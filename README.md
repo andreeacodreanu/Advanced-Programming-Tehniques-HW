@@ -1,1 +1,14 @@
 # Tema-1-TAP
+1. Considerăm următorul joc pentru două persoane. Tabla de joc este o secvenţă de n numere întregi pozitive, iar cei doi jucători mută alternativ. Când un jucător mută, el selectează un număr ori de la stânga ori de la dreapta secvenţei. Numărul selectat este şters de pe tablă. Jocul se termină când toate numerele au fost selectate. Primul jucător câştigă dacă suma numerelor pe care le-a selectat este cel puţin egală cu suma selectată de al doilea jucător. Al doilea jucător joacă cât de bine poate. Primul jucător începe jocul. Ştim că tablă se află la început un număr par de elemente n.
+ Să se scrie un program astfel încât, indiferent cum va juca al doilea jucător, primul jucător câştigă. Scrieţi programul astfel încât primul jucător să mute cu ajutorul programului, iar calculatorul să mute aleator de la stânga sau de la dreapta. La ieşire se va scrie suma obţinută de primul jucător, suma obţinută de cea de al doilea şi secvenţele de mutări sub forma unor şiruri cu caracterele S pentru stânga şi D pentru dreapta. Exemplu: pentru tabla cu numerele 2 1 4 3 o soluţie câştigătoare este următoarea:
+Pasul 1 - primul jucător alege S (valoarea 2); rămân pe tablă 1 4 3
+Pasul 2 - calculatorul are două posibilităţi: S (valoarea 1) sau D (valoarea 3).
+Pasul 3 – dacă la pasul 2 calculatorul a ales S, atunci primul jucător alege S (valoarea 4);
+dacă la pasul 2 calculatorul a ales D, atunci primul jucător alege D (valoarea 4);
+Pasul 4 – pe tablă a mai rămas doar o valoare (3 respectiv 1, în funcţie de alegerea de la pasul 2), pe care o alege calculatorul
+Astfel, primul jucător a adunat suma 2+4, iar calculatorul suma 1+3 (respectiv 3+1), deci primul jucător a câştigat
+
+2. Dat un arbore cu n vârfuri, să se determine o mulţime de vârfuri neadiacente de cardinal maxim (o submulţime independentă maximă a mulţimii vârfurilor). Exemplu: Pentru un arbore cu 8 vârfuri și muchiile {(1,2),(1,3),(2,4),(2,5),(3,6),(3,7),(5,8)} se va afișa mulțimea {1,4,6,7,8}, nu neapărat în această ordine. 
+
+3. Problema partiţionării intervalelor – Se consideră n intervale închise (interpretare: n cursuri, pentru care se cunosc ora de început şi ora de sfârşit). Se cere să se împartă (partiţioneze) această mulţime de intervale într-un număr minim de submulţimi cu proprietatea că oricare două intervale dintr-o submulţime nu se intersectează şi să se afişeze aceste submulţimi (interpretare: să se determine numărul minim de săli necesare pentru a putea programa aceste cursuri în aceeaşi zi şi afişaţi o astfel de programare). 
+Solutie: Se sortează intervalele crescător după extremitatea iniţială. Pentru fiecare interval I în această ordine execută: se adaugă I la o submulţime deja construită, dacă se poate (nu se intersectează cu niciun interval din ea), altfel se creează o nouă submulţime cu intervalul I.
